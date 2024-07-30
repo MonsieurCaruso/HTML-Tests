@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Botton</title>
+    <style>
+        button {
+           padding: 0.6em 1em;
+           border: 4px solid #fa725a;
+           border-radius: 10px;
+           transition: ease-in-out 0.4s;
+           background-color: transparent;
+           color: #fa725a;
+           font-weight: bolder;
+           font-size: 2em;
+        }
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 0;
+            transition: ease-in-out 0.4s;
+        }
+        body.hover-active {
+            background-color: green;
+        }
+        button:hover {
+            transform: scale(1.1) rotate(360deg);
+            background-color: #fa725a;
+            color: white;
+        }
+        #notificationBox {
+            display: none; /* Hidden by default */
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: blue;
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 2em;
+        }
+    </style>
+    
+</head>
+<body>
+    <button id="hoverButton">
+        #CLICK BUTTON
+    </button>
+
+    <div id="notificationBox">Hello Philippo</div>
+
+    <script>
+        const button = document.getElementById('hoverButton');
+
+        button.addEventListener('mouseenter', () => {
+            document.body.classList.add('hover-active');
+            // document.body.style.backgroundColor = 'green';
+        });
+
+        button.addEventListener('mouseleave', () => {
+            document.body.classList.remove('hover-active');
+            // document.body.style.backgroundColor = '';
+        });
+
+        button.addEventListener('click', () => {
+            notificationBox.style.display = 'block';
+        });
+
+        document.body.addEventListener('wheel', () => {
+            document.body.style.backgroundColor = 'yellow';
+        });
+        document.body.addEventListener('click', () => {
+            document.body.style.backgroundColor = '';
+        });
+    </script>
+</body>
+</html>

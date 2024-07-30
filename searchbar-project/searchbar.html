@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dropdown search bar</title>
+</head>
+<body>
+    <div class="search-bar">
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="search-input" placeholder="Job title or keyword">
+        </div>
+        <div class="dropdown">
+            <div id="drop-text" class="dropdown-text">
+                <span id="anywhere">Anywhere</span>
+                <i id="icon" class="fa-solid fa-chevron-down"></i>
+            </div>
+            <ul id="list" class="dropdown-list">
+                <li class="dropdown-list-item">Anywhere</li>
+                <li class="dropdown-list-item">Berlin</li>
+                <li class="dropdown-list-item">Paris</li>
+                <li class="dropdown-list-item">London</li>
+                <li class="dropdown-list-item">Rome</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
